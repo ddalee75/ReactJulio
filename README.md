@@ -1,45 +1,45 @@
 # ReactJulio
-React Type script docker file docke-compose
+React Type script docker file docke-compose <br>
 
-creer une repertoire Nom de repertoire
+creer une repertoire Nom de repertoire<br>
 
 
-creer docker-compose.yml sous  nom de repertoire
+creer docker-compose.yml sous  nom de repertoire<br><br>
 
-version: '3.9'
+version: '3.9'<br>
 
-services:
+services:<br>
 
-  frontend:
-    container_name: frontend
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    image: frontend
-    ports:
-      - 3000:3000
-    volumes:
-      - ./front:/usr/src/app
-    command: sh -c 'npm install && npm run start'
+  frontend:<br>
+    container_name: frontend<br>
+    build:<br>
+      context: ./<br>
+      dockerfile: Dockerfile<br>
+    image: frontend<br>
+    ports:<br>
+      - 3000:3000<br>
+    volumes:<br>
+      - ./front:/usr/src/app<br>
+    command: sh -c 'npm install && npm run start'<br>
 
-creer Dockerfile sous nom de repertoire
+creer Dockerfile sous nom de repertoire<br>
 
-creer une repertoire front
+creer une repertoire front<br><br>
 
-terminal 
-docker-compose build
+terminal <br>
+docker-compose build<br>
 
-aller dans container frontend
-docker-compose run --rm frontend sh ( --rm = creer provisoirement le container et aller dedans) \
+aller dans container frontend<br>
+docker-compose run --rm frontend sh ( --rm = creer provisoirement le container et aller dedans) \<br>
 
-creer un projet react avec ts (./ creer dans le repertoire acture = front)
-          npx create-react-app ./ --template typescript
+creer un projet react avec ts (./ creer dans le repertoire acture = front)<br>
+          npx create-react-app ./ --template typescript<br>
 
-sortir de container
-lancer : 
-docker-compose up
+sortir de container<br>
+lancer : <br>
+docker-compose up<br>
 
-check localhost:3000
+check localhost:3000<br>
 
-.gitignore doit etre presenter dans front et back
+.gitignore doit etre presenter dans front et back<br>
 
